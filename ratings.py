@@ -10,7 +10,7 @@ def restaurant_ratings(file):
     for lines in input_file:
         lines = lines.rstrip().split(":")
         ratings_dict[lines[0]] = lines[1]
-    return ratings_dict.items()
+    # return ratings_dict.items()
 
 
 def add_restaurant(file):
@@ -26,8 +26,8 @@ def print_sorted_scores(file):
     for restaurant, rating in sorted(ratings_dict.items()):
         print(f"{restaurant} is rated at {rating}.")
 
-print(restaurant_ratings("scores.txt"))
+restaurant_ratings("scores.txt")
 print(add_restaurant("scores.txt"))
-print(print_sorted_scores("scores.txt"))
+print_sorted_scores("scores.txt")
 
 
