@@ -5,12 +5,13 @@ ratings_dict = {}
 
 
 def restaurant_ratings(file):
-    """Restaurant rating lister."""
+    """Creates a dictionary from a file containing restaurant names and ratings"""
 
     for lines in input_file:
         lines = lines.rstrip().split(":")
         ratings_dict[lines[0]] = lines[1]
     return ratings_dict.items()
+
 
 def add_restaurant(file):
     """Asks user for input and adds it to the dictionary"""
